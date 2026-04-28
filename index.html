@@ -731,22 +731,15 @@
       }
 
       .property-pills {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr;
         gap: 10px;
-        overflow-x: auto;
-        padding-bottom: 2px;
-        scroll-snap-type: x proximity;
-      }
-
-      .property-pills::-webkit-scrollbar {
-        display: none;
       }
 
       .property-pill {
-        flex: 0 0 84%;
-        min-width: 260px;
+        width: 100%;
+        min-width: 0;
         padding: 12px 14px;
-        scroll-snap-align: start;
       }
 
       .property-pill .pill-top {
@@ -759,7 +752,10 @@
       }
 
       .property-pill p {
-        display: none;
+        display: block;
+        margin-top: 6px;
+        font-size: 12px;
+        line-height: 1.45;
       }
 
       .price-row strong,
