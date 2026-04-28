@@ -709,11 +709,57 @@
         padding: 22px;
       }
 
-      .property-pills,
       .quick-strip,
       .stats-grid,
       .check-grid {
         grid-template-columns: 1fr;
+      }
+
+      .selector-shell {
+        position: static;
+        top: auto;
+        padding: 12px;
+        backdrop-filter: none;
+      }
+
+      .selector-head {
+        margin-bottom: 10px;
+      }
+
+      .selector-head span {
+        display: none;
+      }
+
+      .property-pills {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        padding-bottom: 2px;
+        scroll-snap-type: x proximity;
+      }
+
+      .property-pills::-webkit-scrollbar {
+        display: none;
+      }
+
+      .property-pill {
+        flex: 0 0 84%;
+        min-width: 260px;
+        padding: 12px 14px;
+        scroll-snap-align: start;
+      }
+
+      .property-pill .pill-top {
+        margin-bottom: 4px;
+      }
+
+      .property-pill h3 {
+        font-size: 1rem;
+        line-height: 1.2;
+      }
+
+      .property-pill p {
+        display: none;
       }
 
       .price-row strong,
